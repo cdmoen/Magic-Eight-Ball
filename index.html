@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Colin Moen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Eight Ball</title>
+</head>
+
+<body>
+
+    <script>
+        let askAgain;
+        let userQuestion;
+        let answer;
+        const answers = [
+            "All signs point to yes",
+            "The spirits say no",
+            "It is quite possible",
+            "It is doubtful",
+            "Yes, definitely",
+            "Never",
+            "Ask again later",
+            "Outlook not so good",
+        ];
+
+        while (true) {
+            userQuestion = prompt("Ask me a question:");
+            answer = answers[Math.floor(Math.random() * answers.length)];
+            alert(`The Magic 8-ball says... ${answer}`)
+            askAgain = prompt("would you like to ask another question?");
+            if (askAgain.toLowerCase() === "yes") {
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+        alert("Thank you for consulting the magic 8-ball!");
+    </script>
+</body>
+
+</html>
