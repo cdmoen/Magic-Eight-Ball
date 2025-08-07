@@ -15,20 +15,20 @@
         let userQuestion;
         let answer;
         const answers = [
-            "All signs point to yes",
-            "The spirits say no",
-            "It is quite possible",
-            "It is doubtful",
-            "Yes, definitely",
-            "Never",
-            "Ask again later",
-            "Outlook not so good",
+            "All signs point to yes!",
+            "The spirits say no.",
+            "It is quite possible...",
+            "It is doubtful...",
+            "Yes, definitely!",
+            "Never!!!",
+            "Ask again later?",
+            "Outlook not so good...",
         ];
 
         while (true) {
-            userQuestion = prompt("Ask me a question:");
+            userQuestion = prompt(`Welcome to the Magic 8-Ball!\nAsk me a question about your future:`);
             answer = answers[Math.floor(Math.random() * answers.length)];
-            alert(`The Magic 8-ball says... ${answer}`)
+            alert(`Consulting the spirits ...\n\n\n${answer}\n\n`)
             askAgain = prompt("would you like to ask another question?");
             if (askAgain.toLowerCase() === "yes") {
                 continue;
